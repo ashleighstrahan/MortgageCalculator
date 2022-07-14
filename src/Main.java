@@ -24,18 +24,20 @@ public class Main {
         while(true) {
             System.out.print("Annual Interest Rate: ");
             annualInterest = scanner.nextFloat();
-            monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
-            if(annualInterest <=10 && annualInterest >= 2)
+            if(annualInterest <=10 && annualInterest >= 2) {
+                monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
                 break;
+            }
             System.out.println("Enter a value between 2 and 10");
         }
 
         while(true) {
             System.out.print("Period (Years): ");
             byte years = scanner.nextByte();
-            numberOfPayments = years * MONTHS_IN_YEAR;
-            if(years <= 30 && years >= 10)
+            if(years <= 30 && years >= 10) {
+                numberOfPayments = years * MONTHS_IN_YEAR;
                 break;
+            }
             System.out.println("Enter a value between 10 and 30");
         }
 
